@@ -1,0 +1,12 @@
+@import 'functions';
+@import 'colors';
+
+header{
+    min-height: 520px;
+    background-size: cover;
+    overflow:hidden;
+    position: relative;
+  @media( min-width: 1280px ){
+    min-height: 640px;
+  }
+}

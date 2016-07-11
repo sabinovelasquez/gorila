@@ -1,0 +1,32 @@
+%section#contact
+  %h2.text-center
+    Contact
+  .container
+    .row
+      .col-md-12
+        %form{ :'ng-submit' => 'sendMail()', :'ng-controller' => 'ContactCtrl' }
+          .col-lg-6
+            .form-group
+              %label Name
+              %input.form-control{:'ng-model' => 'name', :'placeholder' => 'Name', :'required' => 'required', :'type' => 'text' }
+            .form-group
+              %label Email
+              %input.form-control{:'ng-model' => 'email', :'placeholder' => 'Email', :'required' => 'required', :'type' => 'email' }
+            .form-group
+              %label Message
+              %textarea.form-control{:'ng-model' => 'message', :'required' => 'required', :rows => '5' }
+
+            %input#submit.btn.btn-info.pull-right{:'ng-model' => 'submit', :'type' => 'submit', :value => 'Send', :'ng-class' => '{disabled:sending}' }
+              %i.fa.fa-spinner.fa-pulse.sending{ :'ng-show' => 'sending' }
+            %hr.featurette-divider.hidden-lg
+          .col-lg-5.col-md-push-1
+            %address
+              %h3 Title
+              %p.lead
+                Address
+              %p
+                %i.fa.fa-phone
+                (+00) 000000
+              %p
+                %i.fa.fa-envelope
+                info@email.com
