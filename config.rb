@@ -24,17 +24,12 @@ end
 case ENV['TARGET'].to_s.downcase
   when 'production'
     activate :deploy do |deploy|
-    # remove these comments for rsync
-    # deploy.method = :rsync 
-    # deploy.build_before = true
-    # deploy.host = 'IP'
-    # deploy.path = '/var/www/site.com'
-    deploy.port     = 22
-    deploy.method   = :sftp
-    deploy.host     = 'IP'
-    deploy.path     = '/public_html/'
-    deploy.user     = 'user'
-    deploy.password = 'optional'
+    deploy.build_before = true
+    deploy.method   = :ftp
+    deploy.host     = '200.63.97.53'
+    deploy.path     = 'public_html/'
+    deploy.user     = 'gorila'
+    deploy.password = 'RdYisrZ'
     end
   else
     activate :deploy do |deploy|

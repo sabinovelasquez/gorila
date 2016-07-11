@@ -2,11 +2,28 @@
 @import 'colors';
 
 header{
-    min-height: 520px;
-    background-size: cover;
-    overflow:hidden;
-    position: relative;
-  @media( min-width: 1280px ){
-    min-height: 640px;
+  position: relative;
+  overflow: hidden;
+  // min-height: 520px;
+  background-size: cover;
+  @media( min-width: 1280px){
+    // min-height: 640px;
+  }
+  .logo{
+    width: 200px;
+    height: 100px;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+  }
+  .title{
+    h1{
+      font-family: 'Vast Shadow', cursive;
+    }
+    h2{
+      font-family: 'Playfair Display', serif;
+    }
+    h3{
+      font-family: 'Oswald', sans-serif;
+    }
   }
 }
